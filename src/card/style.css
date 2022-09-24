@@ -35,9 +35,14 @@ body {
     position: relative;
     width: var(--card-width);
     height: var(--card-height);
+    display: flex;
 }
 
 .card__model {
+    width: 100%;
+}
+
+.card__model__img {
     position: absolute;
     overflow: hidden;
     border-radius: var(--card-radius);
