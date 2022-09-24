@@ -1,0 +1,18 @@
+html {
+    --logic: value > 20 ? '50px': '10px'
+}
+
+body {
+    position: relative;
+}
+
+body::after {
+    content: '';
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: blue;
+    border-radius: var(--logic);
+}

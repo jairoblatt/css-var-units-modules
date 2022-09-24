@@ -1,0 +1,27 @@
+/*
+Syntax types: 
+ -length
+ -number
+ -percentage
+ -length-percentage
+ -color
+ -image
+ -url
+ -integer
+ -angle
+ -time
+ -resolution
+ -transform-list
+ -transform-function
+ -custom-ident (a custom identifier string)
+*/
+
+@property --x {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 42px;
+}
+
+body {
+    height: var(--x);
+}
