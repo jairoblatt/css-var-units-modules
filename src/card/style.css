@@ -5,6 +5,7 @@
     --color-white: #fff;
     --color-black: #000;
     --color-primary: #7c3aed;
+    --color-primary-hover: #7338da4d;
     --color-light-gray: #9ca3af;
     --color-dark-gray: #0f172a;
     --card-radius: 0.5rem;
@@ -22,7 +23,6 @@
 
 body {
     background-color: var(--color-dark-gray);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +31,15 @@ body {
 }
 
 body::after {
+    /* height: 30px;
+    width: 30px;
+    top: 50%;
+    left: 50%;
+    content: ' ';
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 2em var(--color-primary-hover)); */
+
     position: absolute;
     height: 100%;
     width: 100%;
@@ -41,6 +50,7 @@ body::after {
     opacity: 0.4;
 }
 
+
 .card {
     background-color: var(--color-white);
     border-radius: var(--card-radius);
@@ -48,6 +58,13 @@ body::after {
     width: var(--card-width);
     height: var(--card-height);
     display: flex;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+
+.card:hover {
+    filter: drop-shadow(0 0 2em var(--color-primary-hover));
 }
 
 .card__model {
